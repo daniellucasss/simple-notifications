@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <title>Simple Notifications Demo</title>
 
-    <link href="/dist/simple-notifications.css" rel="stylesheet">
-    <script src="/dist/simple-notifications.js"></script>
+    <link href="../dist/simple-notifications.css" rel="stylesheet">
+    <script src="../dist/simple-notifications.js"></script>
 
     <script>
         function testNotification(type) {
@@ -113,7 +113,7 @@
     <h2>See <strong>README.md</strong> for more information and code samples.</h2>
 
     <section>
-        <button onclick="testNotification()">Create Neutral Notification</button>
+        <button onclick="testNotification('neutral')">Create Neutral Notification</button>
     </section>
 
     <section>
@@ -122,6 +122,10 @@
 
     <section>
         <button onclick="testNotification('bad')">Create Negative Notification</button>
+    </section>
+
+    <section>
+        <button onclick="testNotification('#8DC2F4')">Create Test Notification</button>
     </section>
 
     <section>
