@@ -8,8 +8,8 @@
     <script src="../dist/simple-notifications.js"></script>
 
     <script>
-        function testNotification(type) {
-            SimpleNotifications.create("Test Notification", type);
+        function testNotification(type, isHex) {
+            SimpleNotifications.create("Test Notification", type, isHex);
         }
         function changeNotificationTimeout() {
             var currentTimeout = SimpleNotifications._constants.timeout;
@@ -113,7 +113,7 @@
     <h2>See <strong>README.md</strong> for more information and code samples.</h2>
 
     <section>
-        <button onclick="testNotification('neutral')">Create Neutral Notification</button>
+        <button onclick="testNotification()">Create Neutral Notification</button>
     </section>
 
     <section>
@@ -125,7 +125,7 @@
     </section>
 
     <section>
-        <button onclick="testNotification('#8DC2F4')">Create Test Notification</button>
+        <button onclick="testNotification('#8DC2F4', true)">Create Test Notification</button>
     </section>
 
     <section>

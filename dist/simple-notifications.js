@@ -18,16 +18,15 @@ var SimpleNotifications = {
         SimpleNotifications._constants.insertLocation = defaults.insertLocation || SimpleNotifications._constants.insertLocation;
     },
 
-	create: function(message, arg) {
+	create: function(message, arg, isHex) {
 		var id = SimpleNotifications._generateId();
         // HTML of notification.
         var html = "<div id='" + id + "'";
-        if(arg === 'bad' || arg === 'good' || arg === 'neutral') {
-            html += " class='" + SimpleNotifications._constants.className + " " + (arg || '') + "'>" + message + "</div>";
-        } else {
+        if(isHex) {
             html += " class='" + SimpleNotifications._constants.className + "'' style='background-color: " + arg + " !important'>" + message + "</div>";
+        } else {
+            html += " class='" + SimpleNotifications._constants.className + " " + (arg || '') + "'>" + message + "</div>";
         }
-        console.log(html);
 
         // Add to DOM.
         try {

@@ -6,6 +6,7 @@ In this case, the 'bottom' property is being used to keep the notification off s
 it's visible.
 */
 .simple-notification {
+  background: #08c;
   box-shadow: 0 -5px 5px rgba(0, 0, 0, 0.1);
   font-family: Helvetica, Arial, sans-serif;
   font-size: 20px;
@@ -38,5 +39,4 @@ it's visible.
 }
 
 .simple-notification.neutral {
-  background: #08c;
 }
